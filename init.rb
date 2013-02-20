@@ -2,10 +2,8 @@
 require 'redmine'
 
 # Patches to the Redmine core.
-require 'dispatcher'
-
-Dispatcher.to_prepare do
-  require_dependency 'principal'
+Rails.configuration.to_prepare do
+  require_dependency 'project'
   require_dependency 'user'
 
   User.send(:include, OauthProviderUserPatch)

@@ -1,7 +1,7 @@
 require 'oauth/controllers/provider_controller'
 class OauthController < ApplicationController
   unloadable
-
+  skip_filter :check_if_login_required
   include OAuth::Controllers::ProviderController
 
   def logged_in?

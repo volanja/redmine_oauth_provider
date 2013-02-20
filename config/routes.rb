@@ -1,11 +1,10 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :oauth_clients
+resources :oauth_clients
+match 'oauth/test_request', :to => 'oauth#test_request', :as => :test_request
+match 'oauth/token', :to => 'oauth#token', :as => :token
+match 'oauth/access_token', :to => 'oauth#access_token', :as => :access_token
+match 'oauth/request_token', :to => 'oauth#request_token', :as => :request_token
+match 'oauth/authorize', :to => 'oauth#authorize', :as => :authorize
+match 'oauth/revoke', :to => 'oauth#revoke', :as => :revoke
+match 'oauth', :to => 'oauth#index', :as => :oauth
+match 'oauth/current_user', :to => 'oauth#current_user', :as => :current_user
 
-  map.test_request '/oauth/test_request', :controller => 'oauth', :action => 'test_request'
-  map.token '/oauth/token', :controller => 'oauth', :action => 'token'
-  map.access_token '/oauth/access_token', :controller => 'oauth', :action => 'access_token'
-  map.request_token '/oauth/request_token', :controller => 'oauth', :action => 'request_token'
-  map.authorize '/oauth/authorize', :controller => 'oauth', :action => 'authorize'
-  map.revoke '/oauth/revoke', :controller => 'oauth', :action => 'revoke'
-  map.oauth '/oauth', :controller => 'oauth', :action => 'index'
-end
