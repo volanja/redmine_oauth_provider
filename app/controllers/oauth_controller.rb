@@ -4,6 +4,8 @@ class OauthController < ApplicationController
   skip_filter :check_if_login_required
   include OAuth::Controllers::ProviderController
 
+  before_filter :login_or_oauth_required, :only => [:user_info]
+
   def logged_in?
     User.current.logged?
   end
@@ -12,8 +14,18 @@ class OauthController < ApplicationController
     raise Unauthorized unless User.current.logged?
   end
 
+  def user_info
+    respond_to do |format|
+      format.json { render :json => User.find(session[:user_id]) }
+    end
+  end
+
   def current_user
-    User.current
+    User.find(session[:user_id])
+  end
+
+  def current_user=(user)
+    start_user_session(user)
   end
 
   protected
