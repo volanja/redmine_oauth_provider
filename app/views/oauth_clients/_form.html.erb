@@ -1,15 +1,15 @@
 <%= error_messages_for @client_application %>
-<div class="box tabular">
+<div class="box">
   <div class="field">
-    <label for="client_application_name">Name*</label>
+    <label for="client_application_name">Name*</label><br/>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <label for="client_application_url">Main Application URL*</label>
+    <label for="client_application_url">Main Application URL*</label><br/>
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <label for="client_application_callback_url">Callback URL*</label>
+    <label for="client_application_callback_url">Callback URL*</label><br/>
     <%= f.text_field :callback_url %>
   </div>
   <div class="field">
