@@ -28,6 +28,12 @@ class OauthController < ApplicationController
     start_user_session(user)
   end
 
+  def authorize_with_allow
+    params[:authorize] = '1' if params[:allow]
+    authorize_without_allow
+  end
+  alias_method_chain :authorize, :allow
+
   protected
   # Override this to match your authorization page form
   # It currently expects a checkbox called authorize
