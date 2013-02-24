@@ -1,5 +1,9 @@
-<h1>Authorize access to your account</h1>
-<p>Would you like to authorize <%= link_to @token.client_application.name,@token.client_application.url %> (<%= link_to @token.client_application.url,@token.client_application.url %>) to access your account?</p>
+<h1><%= l(:oauth_authorize_tilte) %></h1>
+<p><%= l(:oauth_authorize_comment) %></p>
+<p>
+  <%= link_to(@token.client_application.name, @token.client_application.url) %>
+  (<%= link_to(@token.client_application.url, @token.client_application.url) %>)
+</p>
 <%= form_tag authorize_url do %>
   <%= hidden_field_tag "oauth_token", @token.token %>
   <%- if params[:oauth_callback] -%>
@@ -7,6 +11,6 @@
 <%- end -%>
 <p>
   <%= submit_tag(l(:oauth_allow), :name => :allow) %>
-  <%= submit_tag(l(:oauth_deny), :name => :deny)%>
+  <%= submit_tag(l(:oauth_deny), :name => :deny) %>
 </p>
 <% end %>

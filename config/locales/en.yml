@@ -2,3 +2,19 @@
 en:
   oauth_allow: "Allow"
   oauth_deny: "Deny"
+  oauth_authorize_tilte:  Authorize access to your account
+  oauth_authorize_comment: Would you like to authorize a following application to access your account?
+  oauth_deny_message: You have disallowed this request
+  oauth_client_applications: OAuth Client Applications
+  oauth_register_application: Register your application
+  oauth_main_application_url: Main Application URL
+  oauth_callback_url: Callback URL
+  oauth_support_url: Support URL
+  oauth_edit_application: Edit your application
+  oauth_oauth_register_application: Register a new application
+  oauth_detail: OAuth details for %{name}
+  oauth_consumer_key: Consumer Key
+  oauth_consumer_secret: Consumer Secret
+  oauth_request_token_url: Request Token URL
+  oauth_access_token_url: Access Token URL
+  oauth_authorize_url: Authorize URL

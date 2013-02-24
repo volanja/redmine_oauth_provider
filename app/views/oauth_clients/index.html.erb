@@ -1,24 +1,4 @@
-<h1>OAuth Client Applications</h1>
-<% unless @tokens.empty? %>
-<p>The following tokens have been issued to applications in your name</p>
-<table>
-  <tr><th>Application</th><th>Issued</th><th>&nbsp;</th></tr>
-  <% @tokens.each do |token|%>
-    <% content_tag_for :tr, token do %>
-      <td><%= link_to token.client_application.name, token.client_application.url %></td>
-      <td><%= token.authorized_at %></td>
-      <td>
-        <% form_tag :controller => 'oauth', :action => 'revoke' do %>
-        <%= hidden_field_tag 'token', token.token %>
-        <%= submit_tag "Revoke!" %>
-        <% end %>
-      </td>
-    <% end %>
-  <% end %>
-</table>
-<% end %>
-
-<h3>Application Developers</h3>
+<h1><%= l(:oauth_client_applications) %></h1>
 <% unless @client_applications.empty? %>
   <table class="list oauth-clients">
     <thead>
@@ -32,13 +12,13 @@
       <% @client_applications.each do |client|%>
         <tr>
           <td><%= link_to client.name, oauth_client_path(client) %></td>
-          <td><%= link_to 'Edit', edit_oauth_client_path(client), :class => "icon icon-edit" %></td>
-          <td><%= link_to 'Delete', oauth_client_path(client), :confirm => "Are you sure?", :method => :delete, :class => "icon icon-del" %></td>
+          <td><%= link_to l(:button_edit), edit_oauth_client_path(client), :class => "icon icon-edit" %></td>
+          <td><%= link_to l(:button_delete), oauth_client_path(client), :confirm => l(:text_are_you_sure), :method => :delete, :class => "icon icon-del" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <% end %>
-<%= link_to "Register your application", { :action => :new }, :class => "icon icon-add" %>
+<%= link_to l(:oauth_register_application), { :action => :new }, :class => "icon icon-add" %>
 
 <%= stylesheet_link_tag 'application.css', :plugin => 'redmine_oauth_provider' %>
