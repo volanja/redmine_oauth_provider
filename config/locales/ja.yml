@@ -10,7 +10,7 @@ ja:
   oauth_callback_url: コールバック URL
   oauth_support_url: サポート URL
   oauth_edit_application: アプリケーションの編集
-  oauth_oauth_register_application: アプリケーションの登録
+  oauth_register_application: アプリケーションの登録
   oauth_detail: OAuth %{name} の詳細
   oauth_consumer_key: Consumer Key
   oauth_consumer_secret: Consumer Secret

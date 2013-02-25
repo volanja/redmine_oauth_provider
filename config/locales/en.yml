@@ -11,7 +11,7 @@ en:
   oauth_callback_url: Callback URL
   oauth_support_url: Support URL
   oauth_edit_application: Edit your application
-  oauth_oauth_register_application: Register a new application
+  oauth_register_application: Register a new application
   oauth_detail: OAuth details for %{name}
   oauth_consumer_key: Consumer Key
   oauth_consumer_secret: Consumer Secret
