@@ -5,7 +5,6 @@ ja:
   oauth_authorize_comment: 以下のアプリケーションへのアクセスを許可しますか?
   oauth_deny_message: リクエストは許可されませんでした
   oauth_client_applications: OAuth クライアントアプリケーション 
-  oauth_register_application: アプリケーションを登録する
   oauth_main_application_url: メインアプリケーション URL
   oauth_callback_url: コールバック URL
   oauth_support_url: サポート URL

@@ -6,7 +6,6 @@ en:
   oauth_authorize_comment: Would you like to authorize a following application to access your account?
   oauth_deny_message: You have disallowed this request
   oauth_client_applications: OAuth Client Applications
-  oauth_register_application: Register your application
   oauth_main_application_url: Main Application URL
   oauth_callback_url: Callback URL
   oauth_support_url: Support URL
