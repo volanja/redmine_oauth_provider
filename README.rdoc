@@ -20,13 +20,24 @@ Then, restart your Redmine.
 
 == Manage your client applications
 
-Access to http://your.redmine.host/oauth_clients/
+Access to
+
+    http://your.redmine.host/oauth_clients/
 
 And register your applications.
 
 == OAuth URL
 
-* Request Token URL: http://your.redmine.host/oauth/request_token
-* Access Token URL: http://your.redmine.host/oauth/access_token
-* Authorize URL: http://your.redmine.host/oauth/authorize
+* Request Token URL:
+
+     http://your.redmine.host/oauth/request_token
+
+* Access Token URL:
+
+    http://your.redmine.host/oauth/access_token
+
+* Authorize URL:
+
+    http://your.redmine.host/oauth/authorize
+
 
