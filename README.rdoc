@@ -15,6 +15,9 @@ Add this to `config/application.rb`:
 
     require 'oauth/rack/oauth_filter'
     config.middleware.use OAuth::Rack::OAuthFilter
+    
+Create database tables:
+    rake redmine:plugins:migrate RAILS_ENV=production
 
 Then, restart your Redmine.
 
