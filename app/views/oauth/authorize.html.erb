@@ -10,7 +10,7 @@
   <%= hidden_field_tag "oauth_callback", params[:oauth_callback] %>
 <%- end -%>
 <p>
-  <%= submit_tag(l(:oauth_allow), :name => :allow) %>
+  <%= submit_tag(l(:oauth_allow), :name => :allow, :autofocus => true) %>
   <%= submit_tag(l(:oauth_deny), :name => :deny) %>
 </p>
 <% end %>
