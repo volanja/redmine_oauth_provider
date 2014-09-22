@@ -1,6 +1,13 @@
 # -*- encoding : utf-8 -*-
 require 'redmine'
 
+module RedmineApp
+  class Application < Rails::Application
+    require 'oauth/rack/oauth_filter'
+    config.middleware.use OAuth::Rack::OAuthFilter
+  end
+end
+
 # Patches to the Redmine core.
 Rails.configuration.to_prepare do
   require_dependency 'project'
@@ -13,7 +20,7 @@ Redmine::Plugin.register :redmine_oauth_provider do
   name 'Redmine Oauth Provider plugin'
   author 'Jana Dvořáková'
   description 'Oauth Provider plugin for Redmine'
-  version '0.0.1'
+  version '0.0.2'
   url 'https://github.com/Virtualmaster/redmine-oauth-provider'
   author_url 'http://www.jana4u.net/'
 end

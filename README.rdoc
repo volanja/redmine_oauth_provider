@@ -11,11 +11,6 @@ Type below commands:
     $ cd $RAILS_ROOT/plugins
     $ git clone git://github.com/suer/redmine_oauth_provider.git
 
-Add this to `config/application.rb`:
-
-    require 'oauth/rack/oauth_filter'
-    config.middleware.use OAuth::Rack::OAuthFilter
-    
 Create database tables:
     rake redmine:plugins:migrate RAILS_ENV=production
 
