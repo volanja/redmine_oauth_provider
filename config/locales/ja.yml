@@ -1,10 +1,12 @@
 ja:
+  field_support_url: サポート URL
+  field_callback_url: コールバック URL
   oauth_allow: 許可
   oauth_deny: 許可しない
-  oauth_authorize_tilte: 認証 
+  oauth_authorize_tilte: 認証
   oauth_authorize_comment: 以下のアプリケーションへのアクセスを許可しますか?
   oauth_deny_message: リクエストは許可されませんでした
-  oauth_client_applications: OAuth クライアントアプリケーション 
+  oauth_client_applications: OAuth クライアントアプリケーション
   oauth_main_application_url: メインアプリケーション URL
   oauth_callback_url: コールバック URL
   oauth_support_url: サポート URL
@@ -16,3 +18,8 @@ ja:
   oauth_request_token_url: Request Token URL
   oauth_access_token_url: Access Token URL
   oauth_authorize_url: Authorize URL
+
+  "Registered the information successfully": 登録に成功しました
+  "Updated the client information successfully": 更新に成功しました
+  "Destroyed the client application registration": クライアントアプリケーションを削除しました
+  "Wrong application id": アプリケーション ID が誤っています

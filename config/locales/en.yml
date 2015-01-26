@@ -1,5 +1,7 @@
 # English strings go here for Rails i18n
 en:
+  field_support_url: Support URL
+  field_callback_url: Callback URL
   oauth_allow: "Allow"
   oauth_deny: "Deny"
   oauth_authorize_tilte:  Authorize access to your account
@@ -17,3 +19,8 @@ en:
   oauth_request_token_url: Request Token URL
   oauth_access_token_url: Access Token URL
   oauth_authorize_url: Authorize URL
+
+  "Registered the information successfully": "Registered the information successfully"
+  "Updated the client information successfully": "Updated the client information successfully"
+  "Destroyed the client application registration": "Destroyed the client application registration"
+  "Wrong application id": "Wrong application id"
