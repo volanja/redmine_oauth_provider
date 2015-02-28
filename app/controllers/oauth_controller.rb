@@ -15,8 +15,17 @@ class OauthController < ApplicationController
   end
 
   def user_info
+    user_hash = { :user => {} }
+    user = User.find(session[:user_id])
+    if user
+      hash = user.attributes
+      hash.delete(:hashed_password)
+      hash.delete(:salt)
+      hash.merge!(:mail => user.mail)
+      user_hash = { :user => hash }
+    end
     respond_to do |format|
-      format.json { render :json => User.find(session[:user_id]) }
+      format.json { render :json => user_hash }
     end
   end
 
